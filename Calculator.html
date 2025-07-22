@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                height: 300px;
+                width: 500px;
+                text-align: center;
+                margin:auto ;
+                padding-top: 40px;
+                font-family: cursive;
+                color: green;
+                animation-name: ani;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                border-top-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+                background-color: lightyellow;
+                background-blend-mode: darken;
+            }
+            div button{
+                border: 3px solid yellowgreen;
+                margin: 10px 10px;
+            }
+           div button:hover{
+                cursor: pointer;
+                background-color: white;
+                color:green;
+                padding: 5px 15px;
+            }
+            .t1{
+                border: 2px solid yellowgreen;
+                padding-bottom: 5px;
+            }
+            .t2{
+                border: 2px solid yellowgreen;
+                padding-bottom: 5px;
+            }
+            .t3{
+                border: 2px solid yellowgreen;
+                padding-bottom: 5px;
+            }
+
+            @keyframes ani{
+                0%{
+                    box-shadow: 0px 0px 10px red;
+                    color: red;
+                }
+                10%{
+                    box-shadow: 0px 0px 10px green;
+                    color: green;
+                }
+                20%
+                {
+                    box-shadow: 0px 0px 10px blue;
+                    color: blue;
+                }
+                30%
+                {
+                    box-shadow: 0px 0px 10px red;
+                    color: red;
+                }
+                40%
+                {
+                    box-shadow: 0px 0px 10px green;
+                    color: green;
+                }
+                50%
+                {
+                    box-shadow: 0px 0px 10px blue;
+                    color: blue;
+                }
+                60%
+                {
+                    box-shadow: 0px 0px 10px red;
+                    color: red;
+                }
+                70%
+                {
+                    box-shadow: 0px 0px 10px green;
+                    color: green;
+                }
+                80%{
+                    box-shadow: 0px 0px 10px blue;
+                    color: blue;
+                }
+                90%
+                {
+                    box-shadow: 0px 0px 10px red;
+                    color: red;
+                }
+                100%
+            {
+                box-shadow: 0px 0px 10px green;
+                    color: green;
+            }
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <h1>CALCULATOR</h1>
+       1St NO:  <input type="text" class="t1"/>
+       <br/>
+       2nd NO: <input type="text" class="t2"/><br/>
+       RESULT: <input type="text" class="t3" readonly/><br/>
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <button onclick="div()">/</button>
+    </div>
+        <script>
+            function add()
+            {
+                var t1=document.querySelector(".t1").value;
+                var t2=document.querySelector(".t2").value;
+                var t3=document.querySelector(".t3");
+
+                var ad=parseInt(t1)+parseInt(t2);
+                t3.value=ad;
+            }
+            function sub()
+            {
+                var t1=document.querySelector(".t1").value;
+                var t2=document.querySelector(".t2").value;
+                var t3=document.querySelector(".t3");
+
+                var subtract=parseInt(t1)-parseInt(t2);
+                t3.value=subtract;
+            }
+            function mul()
+            {
+                var t1=document.querySelector(".t1").value;
+                var t2=document.querySelector(".t2").value;
+                var t3=document.querySelector(".t3");
+
+                var multi=parseInt(t1)*parseInt(t2);
+                t3.value=multi;
+            }
+            function div()
+            {
+                var t1=document.querySelector(".t1").value;
+                var t2=document.querySelector(".t2").value;
+                var t3=document.querySelector(".t3");
+
+                var divi=parseInt(t1)/parseInt(t2);
+                t3.value=divi;
+            }
+            
+        </script>
+    </body>
+</html>
